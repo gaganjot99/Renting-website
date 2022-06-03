@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="../media/favicon.png" />
+    <link rel="icon" type="image/png" href="/index/media/favicon.png" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
     />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/about.css" />
+    <link rel="stylesheet" href="/index/css/style.css" />
+    <link rel="stylesheet" href="/index/css/about.css" />
     <title>About Us</title>
   </head>
   <body>
@@ -32,8 +32,12 @@
           /></svg
       ></label>
       <ul class="nav_side">
-        <li class="nav_item"><a href="/main">Buy</a></li>
-        <li class="nav_item"><a href="/addinfo">Rent</a></li>
+        <li class="nav_item">
+          <a class="nav-links" href="/html/main.html">Buy</a>
+        </li>
+        <li class="nav_item">
+          <a class="nav-links" href="/html/addinfo.html">Rent</a>
+        </li>
       </ul>
       <a id="main_logo_header" class="dis_flex" href="/">
         <span class="logo"
@@ -70,23 +74,27 @@
           <div class="nav_dd">
             <ul>
               <li class="nav-sub-item">
-                <a href="/dashboard">Manage your rentals</a>
+                <a class="nav-links" href="/html/dashboard.html"
+                  >Manage your rentals</a
+                >
               </li>
               <li class="nav-sub-item">
-                <a href="/main">Add new rental</a>
+                <a class="nav-links" href="/html/main.html">Add new rental</a>
               </li>
             </ul>
           </div>
         </li>
         <li class="nav_item">
-          <a id="sign_btn" href="/signinpage">Sign in</a>
+          <a id="sign_btn" href="/index/html/signup.html">Sign in</a>
           <span class="arrow_nav"></span>
           <div id="user_nav" class="man_dd">
-            <img id="left-profile-pic" src="/media/0.jpg" />
+            <img id="left-profile-pic" src="" />
             <h3 id="nav-user-name"></h3>
             <div id="nav_profile_dd" class="nav_dd">
               <ul>
-                <li class="nav-sub-item"><a href="/signout">Sign Out</a></li>
+                <li class="nav-sub-item">
+                  <a href="/sign/signout">Sign Out</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -129,7 +137,7 @@
           <ul class="team-members">
             <li class="team-member">
               <img
-                src="../media/team-member-images/Ayush.jpeg"
+                src="/index/media/team-member-images/Ayush.jpeg"
                 alt="ayush-dp"
               />
               <div class="member-details">
@@ -152,7 +160,7 @@
             </li>
             <li class="team-member">
               <img
-                src="../media/team-member-images/Gagan.jpeg"
+                src="/index/media/team-member-images/Gagan.jpeg"
                 alt="ayush-dp"
               />
               <div class="member-details">
@@ -181,7 +189,7 @@
             </li>
             <li class="team-member">
               <img
-                src="../media/team-member-images/Sandeep.jpeg"
+                src="/index/media/team-member-images/Sandeep.jpeg"
                 alt="ayush-dp"
               />
               <div class="member-details">
@@ -209,7 +217,7 @@
             </li>
             <li class="team-member">
               <img
-                src="../media/team-member-images/Shivam.jpeg"
+                src="/index/media/team-member-images/Shivam.jpeg"
                 alt="ayush-dp"
               />
               <div class="member-details">
@@ -242,7 +250,7 @@
     <footer>
       <ul class="footer_nav">
         <li class="footer_nav_item selected-footer-item">
-          <a href="../html/about.html">About</a>
+          <a href="/index/html/about.html">About</a>
         </li>
         <li class="footer_nav_item">
           <a>Research</a>
@@ -257,7 +265,7 @@
           </a>
         </li>
         <li class="footer_nav_item">
-          <a href="../html/help.html">Help</a>
+          <a href="/index/html/help.html">Help</a>
         </li>
       </ul>
       <div class="socials">
@@ -539,6 +547,6 @@
         </svg>
       </div>
     </footer>
-    <script src="/js/nav.js"></script>
+    <script src="/index/js/nav.js"></script>
   </body>
 </html>

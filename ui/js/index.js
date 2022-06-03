@@ -48,7 +48,7 @@ searchBtn.addEventListener("click", (event) => {
     }, 3000);
     return;
   }
-  fetch(`/searchcity/${city}`, {
+  fetch(`/city/searchcity/${city}`, {
     method: "GET",
     mode: "same-origin",
   })
@@ -61,7 +61,7 @@ searchBtn.addEventListener("click", (event) => {
           messageElement.style.visibility = "hidden";
         }, 3000);
       } else {
-        window.open("/main", "_self");
+        window.open("/html/main.html", "_self");
       }
     })
     .catch((error) => console.log(error));

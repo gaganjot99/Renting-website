@@ -9,12 +9,10 @@ if (man_btn[0]) {
   man_btn.forEach((ele, i) => {
     ele.addEventListener("click", (e) => {
       if (stat1 === false || stat1 != i) {
-        console.log("what I'm here for");
         nav_dd[i].style.visibility = "visible";
         arrowfils[i].style.visibility = "visible";
         stat1 = i;
       } else {
-        console.log("i'm here");
         nav_dd[i].style.visibility = "hidden";
         arrowfils[i].style.visibility = "hidden";
         stat1 = false;
@@ -42,7 +40,7 @@ const signBtn = document.getElementById("sign_btn");
 const userDiv = document.getElementById("user_nav");
 
 if (userDiv) {
-  fetch("/userinfo")
+  fetch("/user/userinfo")
     .then((response) => response.json())
     .then((data) => {
       if (data.firstname) {

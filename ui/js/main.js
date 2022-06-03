@@ -124,7 +124,7 @@ applyFilters.addEventListener("click", (event) => {
     maxPrice: maxPrice,
     spaceType: spaceType,
   };
-  fetch("/filters", {
+  fetch("/city/filters", {
     method: "POST",
     mode: "same-origin",
     headers: {
@@ -391,7 +391,7 @@ function updatePortal(data) {
 
 document.getElementById("portal-rent-btn").addEventListener("click", (e) => {
   e.preventDefault();
-  fetch("/requestadd", {
+  fetch("/request/requestadd", {
     method: "POST",
     mode: "same-origin",
     headers: {
@@ -462,7 +462,7 @@ function UpdateListings(data) {
 }
 
 function handleIntialData() {
-  fetch("/citiesdata")
+  fetch("/city/citiesdata")
     .then((response) => response.json())
     .then((data) => {
       UpdateListings(data);

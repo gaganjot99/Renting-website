@@ -39,8 +39,10 @@
           /></svg
       ></label>
       <ul class="nav_side">
-        <li class="nav_item"><a href="/main">Buy</a></li>
-        <li class="nav_item selected-nav-item"><a href="/addinfo">Rent</a></li>
+        <li class="nav_item"><a href="../html/main.html">Buy</a></li>
+        <li class="nav_item selected-nav-item">
+          <a href="../html/addinfo.html">Rent</a>
+        </li>
       </ul>
       <a id="main_logo_header" class="dis_flex" href="/">
         <span class="logo"
@@ -77,23 +79,25 @@
           <div class="nav_dd">
             <ul>
               <li class="nav-sub-item">
-                <a href="/dashboard">Manage your rentals</a>
+                <a href="../html/dashboard.html">Manage your rentals</a>
               </li>
               <li class="nav-sub-item">
-                <a href="/main">Add new rental</a>
+                <a href="../html/main.html">Add new rental</a>
               </li>
             </ul>
           </div>
         </li>
         <li class="nav_item">
-          <a id="sign_btn" href="/signinpage">Sign in</a>
+          <a id="sign_btn" href="/index/html/signup.html">Sign in</a>
           <span class="arrow_nav"></span>
           <div id="user_nav" class="man_dd">
             <img id="left-profile-pic" src="/media/0.jpg" />
             <h3 id="nav-user-name"></h3>
             <div id="nav_profile_dd" class="nav_dd">
               <ul>
-                <li class="nav-sub-item"><a href="/signout">Sign Out</a></li>
+                <li class="nav-sub-item">
+                  <a href="/sign/signout">Sign Out</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -104,7 +108,7 @@
       <div class="form_a">
         <h2>Enter Rental Info</h2>
         <form
-          action="/addinfovalidate"
+          action="/listing/addinfovalidate"
           enctype="multipart/form-data"
           method="post"
         >

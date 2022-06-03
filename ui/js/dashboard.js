@@ -62,7 +62,7 @@ const userName = document.getElementById("main-left-user-name");
 const userEmail = document.getElementById("main-left-user-email");
 
 const updateUserInfo = () => {
-  fetch("/userinfo")
+  fetch("/user/userinfo")
     .then((data) => data.json())
     .then((data) => {
       userPic.src = data.image;
@@ -103,7 +103,7 @@ const listingEleCreate = (listingData, mode) => {
   if (mode === true) {
     listingDiv.children[2].children[1].addEventListener("click", (event) => {
       event.preventDefault();
-      fetch(`/deletelisting/${listingData._id}`)
+      fetch(`/listing/deletelisting/${listingData._id}`)
         .then((data) => data.json())
         .then((data) => {
           if (data.status === "successfull") {
@@ -116,7 +116,7 @@ const listingEleCreate = (listingData, mode) => {
     listingDiv.children[2].children[1].innerText = "Remove";
     listingDiv.children[2].children[1].addEventListener("click", (event) => {
       event.preventDefault();
-      fetch(`/removetenant/${listingData._id}`)
+      fetch(`/listing/removetenant/${listingData._id}`)
         .then((data) => data.json())
         .then((data) => {
           if (data.status === "successfull") {
@@ -152,7 +152,7 @@ const requestEleCreate = (requestData, mode) => {
       requestData.Tenant;
     RequestDiv.children[2].children[0].addEventListener("click", (event) => {
       event.preventDefault();
-      fetch(`/acceptreq/${requestData._id}`)
+      fetch(`/request/acceptreq/${requestData._id}`)
         .then((data) => data.json())
         .then((data) => {
           console.log(data.status);
@@ -164,7 +164,7 @@ const requestEleCreate = (requestData, mode) => {
     });
     RequestDiv.children[2].children[1].addEventListener("click", (event) => {
       event.preventDefault();
-      fetch(`/rejectreq/${requestData._id}`)
+      fetch(`/request/rejectreq/${requestData._id}`)
         .then((data) => data.json())
         .then((data) => {
           if (data.status === "successfull") {
@@ -202,7 +202,7 @@ const requestEleCreate = (requestData, mode) => {
 };
 
 const updateListingsData = () => {
-  fetch("/userdashboarddata")
+  fetch("/user/userdashboarddata")
     .then((response) => response.json())
     .then((data) => {
       if (data.owner[0]) {
