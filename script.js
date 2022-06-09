@@ -15,6 +15,7 @@ const userRouter = require("./serverfiles/user");
 const cityRouter = require("./serverfiles/city");
 const listingRouter = require("./serverfiles/listing");
 const requestRouter = require("./serverfiles/request");
+const graphqlServer = require("./serverfiles/graphql");
 
 dotenv.config();
 
@@ -29,6 +30,7 @@ app.get("/", function (req, res) {
 });
 app.use("/index", express.static(path.join(__dirname + "/ui")));
 app.use("/sign", signRouter);
+app.use("/graphql", graphqlServer);
 
 app.use(validatetoken);
 
